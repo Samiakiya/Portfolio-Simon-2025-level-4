@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Professioneel Portfolio</title>
+<link rel="stylesheet" href="home.css" />
+<link rel="stylesheet" href="./css/project.css">
+</head>
+<body>
+<header>
+  <nav role="navigation" aria-label="Hoofd navigatie">
+    <div class="logo" aria-label="Portfolio logo">MijnPortfolio</div>
+    <ul>
+      <li><a href="home.html#home" aria-label="Ga naar Home">Home</a></li>
+      <li><a href="home.html#about" aria-label="Ga naar Over mij">Over mij</a></li>
+      <li><a href="./views/project.html" aria-label="Ga naar Projecten pagina">Projecten</a></li>
+      <li><a href="home.html#contact" aria-label="Ga naar Contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+&nbsp;
+&nbsp;
+
+<main>
+  <section id="home" tabindex="-1" role="region" aria-label="Home sectie">
+    <div class="photo" aria-label="Foto van mij">
+      <img src="/images/simon.logo.jpg" alt="Professionele portretfoto" />
+    </div>
+    <div class="text">
+      <h1>Welkom op mijn professionele portfolio</h1>
+      <p>Ik ben een gedreven webontwikkelaar met een passie voor functionele en mooie digitale ervaringen. Ontdek mijn vaardigheden, projecten en hoe je contact kunt opnemen.</p>
+    </div>
+  </section>
+&nbsp;
+&nbsp;
+
+  <section id="about" tabindex="-1" role="region" aria-label="Over mij sectie">
+    <h2>Over mij</h2>
+    <p>Hallo! Mijn naam is [Jouw Naam], een gepassioneerde en leergierige student Informatica met een sterke focus op moderne webontwikkeling en gebruikerservaring (UX).</p>
+&nbsp;
+&nbsp;
+
+    <p>Met een achtergrond in zowel frontend als backend ontwikkeling heb ik vaardigheden opgebouwd in onder andere HTML, CSS, JavaScript, en frameworks zoals React en Vue. Ik ben sterk in het ontwerpen van responsieve en toegankelijke websites die er niet alleen goed uitzien, maar ook prettig werken voor iedereen.</p>
+&nbsp;
+&nbsp;
+
+    <p>Mijn professionele kerncompetenties omvatten:</p>
+    <ul>
+      <li><span class="highlight">Frontend development:</span> Creëren van stijlvolle, dynamische en gebruiksvriendelijke interfaces</li>
+      <li><span class="highlight">Backend understanding:</span> Kennis van servertechnologieën en API-integratie</li>
+      <li><span class="highlight">Responsive design:</span> Optimaliseren voor alle schermformaten en apparaten</li>
+      <li><span class="highlight">Toegankelijkheid (Accessibility):</span> Implementatie van WCAG richtlijnen voor inclusieve gebruikerservaring</li>
+      <li><span class="highlight">Teamwork & communicatie:</span> Samenwerken aan uitdagende projecten en effectief communiceren</li>
+    </ul>
+&nbsp;
+&nbsp;
+
+    <p>Buiten het programmeren ben ik leergierig en altijd op zoek naar nieuwe uitdagingen in technologie en design. Ik geloof dat goede software mensen helpt en streef daarom naar oplossingen met gebruiksvriendelijkheid, performance en esthetiek als prioriteit.</p>
+&nbsp;
+&nbsp;
+
+    <p>Ik ben enthousiast om mijn vaardigheden verder te ontwikkelen en bij te dragen aan innovatieve projecten na mijn studie. Wil je samenwerken of heb je vragen? Neem gerust contact op via de contactpagina.</p>
+  </section>
+&nbsp;
+&nbsp;
+
+  <section id="contact" tabindex="-1" role="region" aria-label="Contact sectie">
+    <h2>Contact</h2>
+    <form onsubmit="submitForm(event)" aria-label="Contactformulier">
+      <label for="name">Naam</label>
+      <input type="text" id="name" name="name" placeholder="Je naam" required aria-required="true" autocomplete="name" />
+&nbsp;
+&nbsp;
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="je@email.com" required aria-required="true" autocomplete="email" />
+&nbsp;
+&nbsp;
+
+      <label for="message">Bericht</label>
+      <textarea id="message" name="message" placeholder="Schrijf hier je bericht" required aria-required="true"></textarea>
+&nbsp;
+&nbsp;
+
+      <button type="submit">Versturen</button>
+    </form>
+  </section>
+</main>
+&nbsp;
+&nbsp;
+
+
+</body>
+</html>
