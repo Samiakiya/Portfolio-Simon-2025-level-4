@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
  
  * {
     box-sizing: border-box;
@@ -42,6 +42,8 @@
     gap: 2rem;
     margin: 0;
     padding: 0;
+    justify-content: flex-end;
+    align-items: center;
   }
   nav ul li {
   }
@@ -98,21 +100,34 @@
     color: #a1a1a1;
   }
   #home .photo {
-    flex-shrink: 0;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(10,132,255,0.7);
-    overflow: hidden;
-    border: 5px solid #0a84ff;
-    background: #222;
-  }
-  #home .photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+  flex-shrink: 0;
+  width: min(220px, 60vw);
+  height: min(220px, 60vw);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(10,132,255,0.7);
+  overflow: hidden;
+  border: 5px solid #0a84ff;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#home .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
+  box-shadow: 0 6px 32px rgba(10,132,255,0.18), 0 2px 8px rgba(0,0,0,0.13);
+  border: none;
+  background: #181c24;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  display: block;
+}
   /* About Section */
   #about {
     max-width: 900px;
@@ -194,48 +209,203 @@
     box-shadow: 0 12px 30px rgba(9,102,210,0.7);
     outline: none;
   }
+
+  /* Custom Logo Styles */
+  .custom-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1.2px;
+    color: #0a84ff;
+    user-select: none;
+    margin-right: 2rem;
+  }
+  .sword-logo {
+    width: 48px;
+    height: 48px;
+    display: block;
+    background: #181c24;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(10,132,255,0.10);
+    transition: box-shadow 0.3s;
+  }
+  .logo-text {
+    background: linear-gradient(90deg, #0a84ff 60%, #63dafb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  /* Zwaarden animatie */
+  .sword {
+    transform-origin: 27px 12px;
+    transition: transform 0.5s cubic-bezier(.4,2,.6,1);
+  }
+  .sword-left {
+    transform: rotate(-20deg);
+  }
+  .sword-right {
+    transform: rotate(20deg);
+  }
+  .custom-logo:hover .sword-left,
+  .custom-logo:focus .sword-left {
+    transform: rotate(-60deg);
+  }
+  .custom-logo:hover .sword-right,
+  .custom-logo:focus .sword-right {
+    transform: rotate(60deg);
+  }
+  /* Hamburger menu styles */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  margin-left: 8px;
+}
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 4px 0;
+  background: #0a84ff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    top: 64px;
+    right: 16px;
+    background: #181c24;
+    flex-direction: column;
+    gap: 0;
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(10,132,255,0.13);
+    padding: 12px 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: all 0.3s;
+    z-index: 1001;
+  }
+  nav ul.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  nav ul li {
+    width: 100%;
+    text-align: left;
+  }
+  nav ul li a {
+    width: 100%;
+    display: block;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+  }
+  /* Hamburger animatie */
+  .nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
   /* Responsive adjustments */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     nav {
       padding: 0.5rem 1rem;
     }
+    .custom-logo {
+      font-size: 1.3rem;
+      gap: 8px;
+      margin-right: 1rem;
+    }
+    .sword-logo {
+      width: 36px;
+      height: 36px;
+    }
+    #home {
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
     nav ul {
       gap: 1rem;
     }
     #home {
       flex-direction: column;
       text-align: center;
+      gap: 1.5rem;
     }
     #home h1 {
-      font-size: 2.8rem;
-    }
-    #home .photo {
-      width: 180px;
-      height: 180px;
-      border-width: 4px;
-    }
-    #about {
-      padding: 0 10px;
-    }
-    section {
-      margin: 90px auto 50px;
-      padding: 0 15px;
-    }
-  }
-  @media (max-width: 480px) {
-    nav ul {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    nav ul li button,
-    nav ul li a {
-      padding: 10px 12px;
-      font-size: 0.95rem;
+      font-size: 2.2rem;
     }
     #home .photo {
       width: 140px;
       height: 140px;
       border-width: 3px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+    }
+    .custom-logo {
+      font-size: 1.1rem;
+      gap: 6px;
+    }
+    .sword-logo {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.5rem 0.5rem;
+    }
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+    nav ul li button,
+    nav ul li a {
+      padding: 10px 10px;
+      font-size: 0.95rem;
+    }
+    .custom-logo {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    #home .photo {
+      width: 110px;
+      height: 110px;
+      border-width: 2px;
+      margin-bottom: 14px;
+    }
+    #home h1 {
+      font-size: 1.4rem;
+    }
+    section {
+      margin: 70px auto 30px;
+      padding: 0 8px;
     }
   }
