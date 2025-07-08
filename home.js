@@ -29,3 +29,17 @@ function scrollToSection(id) {
     navUl.classList.toggle('open');
     navToggle.setAttribute('aria-expanded', navUl.classList.contains('open'));
   });
+
+  // Vertalingen voor persoonlijke projecten
+const translations = {
+  nl: {
+    'yard-title': 'Psalmen',
+    'yard-desc': 'Deze pagina is bedoeld voor zangers voor op het podium. En iedereen mag hem gebruiken.',
+    'view-project': 'Bekijk project'
+  },
+  en: {
+    'yard-title': 'መዝሙር',
+    'yard-desc': 'እዛ ደረ ገጽ ንዘመርቲ ኣብ መድረኽ ኢለ ዝሰራሕኩዋ እያ። ኩሉ ሰብ ድማ ክጥቀመላ ይኽእል እዩ።',
+    'view-project': 'View project'
+  }
+};

@@ -45,6 +45,13 @@
         </svg>
         <span class="logo-text">Portfolio</span>
       </div>
+      
+      <!-- Taalschakelaar toevoegen -->
+      <div class="language-toggle">
+        <button class="lang-btn active" data-lang="nl">NL</button>
+        <button class="lang-btn" data-lang="en">ERi</button>
+      </div>
+      
       <button class="nav-toggle" aria-label="Menu openen/sluiten" aria-expanded="false">
         <span></span>
         <span></span>
@@ -64,9 +71,19 @@
 
   <main>
     <h1>Projecten</h1>
+    
+    <!-- Project categorieën navigatie -->
+    <div class="project-nav">
+      <button class="project-nav-btn active" data-category="all">Alle Projecten</button>
+      <button class="project-nav-btn" data-category="school">Schoolprojecten</button>
+      <button class="project-nav-btn" data-category="personal">Persoonlijke Projecten</button>
+    </div>
+
     <div id="projects" role="region" aria-label="Mijn projecten">
-      <article class="project-card" tabindex="0">
+      <!-- Schoolprojecten -->
+      <article class="project-card school" tabindex="0">
         <img src="../images/portfolio-back.jpg" alt="Screenshot Portfolio Website" class="project-image" />
+        <span class="project-badge school-badge">School</span>
         <h3>Professionele Portfolio Website</h3>
         <p>
           Mijn persoonlijke portfolio-website waar ik mijn projecten, vaardigheden en contactinformatie presenteer.
@@ -74,8 +91,10 @@
         </p>
         <a href="../index.html" target="_blank" rel="noopener noreferrer">Bekijk project</a>
       </article>
-      <article class="project-card" tabindex="0">
+
+      <article class="project-card school" tabindex="0">
         <img src="/images/goede-doel.png" alt="Screenshot Goede Doel App" class="project-image" />
+        <span class="project-badge school-badge">School</span>
         <h3>Goede doel</h3>
         <p>
           Dit project hebben wij gebouwd met als doel een goed doel te steunen. We willen hiermee laten zien hoe je met
@@ -83,27 +102,21 @@
         </p>
         <a href="l1-pro-2-het-goede-doel-Samiakiya" target="_blank" rel="noopener noreferrer">Bekijk project</a>
       </article>
-      <article class="project-card" tabindex="0">
-        <img src="/images/yard.png" alt="Screenshot Yard" class="project-image" />
-        <h3>Yard</h3>
-        <p>
-          Yard is een project waarin ik mezelf voorstel voor sollicitaties. Hier vertel ik meer over wie ik ben, mijn
-          motivatie en mijn kwaliteiten als developer.
-        </p>
-        <a href="Yard-Simon-2025/home-yard.html" target="_blank" rel="noopener noreferrer">Bekijk project</a>
-      </article>
-      <article class="project-card" tabindex="0">
+
+      <article class="project-card school" tabindex="0">
         <img src="/images/mijn game .png" alt="Screenshot Eigen Game" class="project-image" />
+        <span class="project-badge school-badge">School</span>
         <h3>Eigen Game</h3>
         <p>
           Mijn eigen game die ik helemaal zelf heb gemaakt met JavaScript. In dit project heb ik veel geleerd over
           programmeren en het bouwen van interactieve spellen.
         </p>
-        <a href="l2-pro-2-game-in-javascript-Samiakiya/game.html" target="_blank" rel="noopener noreferrer">Bekijk
-          project</a>
+        <a href="l2-pro-2-game-in-javascript-Samiakiya/game.html" target="_blank" rel="noopener noreferrer">Bekijk project</a>
       </article>
-      <article class="project-card" tabindex="0">
+
+      <article class="project-card school" tabindex="0">
         <img src="/images/game craft.png" alt="Screenshot Game Craft" class="project-image" />
+        <span class="project-badge school-badge">School</span>
         <h3>Game Craft</h3>
         <p>
           Game Craft is een groepsproject waarin we samen een game-achtig platform hebben gebouwd. Hier heb ik geleerd
@@ -111,8 +124,10 @@
         </p>
         <a href="l2-pro-3-gamecraft-energie-roc" target="_blank" rel="noopener noreferrer">Bekijk project</a>
       </article>
-      <article class="project-card" tabindex="0">
+
+      <article class="project-card school" tabindex="0">
         <img src="/images/gastenboek 2.jpg" alt="Screenshot Gastenboek" class="project-image" />
+        <span class="project-badge school-badge">School</span>
         <h3>Gastenboek</h3>
         <p>
           Een platform waar bezoekers een bericht kunnen achterlaten voor mij. Zo kunnen mensen makkelijk feedback of
@@ -120,8 +135,10 @@
         </p>
         <a href="l3-pro-2-gastenboek-Samiakiya" target="_blank" rel="noopener noreferrer">Bekijk project</a>
       </article>
-      <article class="project-card" tabindex="0">
+
+      <article class="project-card school" tabindex="0">
         <img src="/images/ergowijzer.jpg" alt="Screenshot Ergowijzer" class="project-image" />
+        <span class="project-badge school-badge">School</span>
         <h3>Ergowijzer</h3>
         <p>
           Ergowijzer is een website voor verschillende doelgroepen over medische hulpmiddelen, zoals ergonomische
@@ -129,14 +146,29 @@
         </p>
         <a href="l3-pro-4-ergowijzer-404-not-found" target="_blank" rel="noopener noreferrer">Bekijk project</a>
       </article>
-      <article class="project-card" tabindex="0">
-        <img src="/images/FDE.png" alt="Screenshot Ergowijzer" class="project-image" />
+
+      <article class="project-card school" tabindex="0">
+        <img src="/images/FDE.png" alt="Screenshot FDE Project" class="project-image" />
+        <span class="project-badge school-badge">School</span>
         <h3>FDE Project</h3>
         <p>
-         Een schoolproject met een team, waarbij we een fastfood webshop ontwikkelden met PHP, MySQL en CSS.
+          Een schoolproject met een team, waarbij we een fastfood webshop ontwikkelden met PHP, MySQL en CSS.
         </p>
         <a href="l4-pro-2-food-delivery-bytehaven0" target="_blank" rel="noopener noreferrer">Bekijk project</a>
       </article>
+
+      <!-- Persoonlijke projecten -->
+      <article class="project-card personal" tabindex="0">
+        <img src="/images/Mezmur_logo.jpg" alt="Screenshot Yard" class="project-image" />
+        <span class="project-badge personal-badge">Persoonlijk</span>
+        <h3 data-translate="yard-title">Psalmen</h3>
+        <p data-translate="yard-desc">
+          Deze pagina is bedoeld voor zangers voor op het podium. En iedereen mag hem gebruiken.
+        </p>
+        <a href="Simon_eigen_PROJECT_2025" target="_blank" rel="noopener noreferrer" data-translate="view-project">Bekijk project</a>
+      </article>
+
+      <!-- Voeg hier meer persoonlijke projecten toe -->
     </div>
   </main>
   &nbsp;
