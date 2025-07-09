@@ -50,7 +50,7 @@ const translations = {
     'yard-desc': 'Deze pagina is bedoeld voor zangers voor op het podium. En iedereen mag hem gebruiken.',
     'view-project': 'Bekijk project'
   },
-  en: {
+  eri: {
     'yard-title': 'መዝሙር',
     'yard-desc': 'እዛ ደረ ገጽ ንዘመርቲ ኣብ መድረኽ ኢለ ዝሰራሕኩዋ እያ። ኩሉ ሰብ ድማ ክጥቀመላ ይኽእል እዩ።',
     'view-project': 'ተመልከት ፕሮጀክት'
