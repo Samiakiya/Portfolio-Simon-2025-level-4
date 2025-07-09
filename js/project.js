@@ -75,5 +75,3 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
   });
 });
 
-console.log('JavaScript is geladen!');
-alert('JavaScript werkt!');
